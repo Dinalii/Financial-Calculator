@@ -1,0 +1,1469 @@
+package sample;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+public class Main extends Application {
+
+    public static String enterNumber;
+    @Override
+    public void start(Stage primaryStage) {
+
+        //wenas wenna oni varibales wenas kala yuthuya. "fo"  kiyana eka ehema oni.
+        //wenas wenna oni varibales wenas kala yuthuya. "fo"  kiyana eka ehema oni.
+        //wenas wenna oni varibales wenas kala yuthuya. "fo"  kiyana eka ehema oni.
+
+        Image image=new Image("file:backgroundImage.png");
+        ImageView background=new ImageView(image);
+        Label Topic= new Label("FINANCIAL CALCULATOR");
+        Topic.setLayoutY(25);
+        Topic.setLayoutX(230);
+        Topic.setFont(Font.font("Times New Roman", FontWeight.BOLD, 42));
+
+        Button btnclick1= new Button("Compound Interest Calculator");
+        btnclick1.setLayoutX(380);
+        btnclick1.setLayoutY(150);
+        btnclick1.setPrefWidth(250);
+        btnclick1.setPrefHeight(50);
+
+        Button btnclick2= new Button("Auto Loan Calculator");
+        btnclick2.setLayoutX(380);
+        btnclick2.setLayoutY(230);
+        btnclick2.setPrefWidth(250);
+        btnclick2.setPrefHeight(50);
+
+        Button btnclick3= new Button("Mortgage Calculator");
+        btnclick3.setLayoutX(380);
+        btnclick3.setLayoutY(310);
+        btnclick3.setPrefWidth(250);
+        btnclick3.setPrefHeight(50);
+        btnclick3.setPrefHeight(50);
+
+        Button btnclick7= new Button("Finance Calculator");
+        btnclick7.setLayoutX(380);
+        btnclick7.setLayoutY(390);
+        btnclick7.setPrefWidth(250);
+        btnclick7.setPrefHeight(50);
+
+        Button btnHelp= new Button("ABOUT");
+        btnHelp.setLayoutX(900);
+        btnHelp.setLayoutY(495);
+        btnHelp.setPrefHeight(30);
+        btnHelp.setPrefWidth(80);
+
+        Button btnExit= new Button("EXIT");
+        btnExit.setLayoutX(900);
+        btnExit.setLayoutY(540);
+        btnExit.setPrefWidth(80);
+        btnExit.setPrefHeight(30);
+
+        btnclick1.setOnAction(event -> {
+
+            Stage mainWindow=(Stage) btnclick1.getScene().getWindow();
+            mainWindow.close();
+            Pane root = new Pane();
+            Image image1 =new Image("file:four.png");
+            ImageView backgroundCompound=new ImageView(image1);
+
+            Label TopicCompoundTopic= new Label("COMPOUND INTEREST SAVING CALCULATOR");
+            TopicCompoundTopic.setLayoutY(25) ;
+            TopicCompoundTopic.setLayoutX(160);
+            TopicCompoundTopic.setFont(Font.font("Times New Roman", FontWeight.BOLD, 42));
+
+            Label lbCompound01= new Label("Capital");
+            lbCompound01.setLayoutY(120) ;
+            lbCompound01.setLayoutX(160);
+
+            Label lbCompound02= new Label("Interest Rate");
+            lbCompound02.setLayoutY(170) ;
+            lbCompound02.setLayoutX(160);
+
+            Label lbCompound03= new Label("Period");
+            lbCompound03.setLayoutY(220) ;
+            lbCompound03.setLayoutX(160);
+
+            Label lbCompound04= new Label("Future Value(FV)");
+            lbCompound04.setLayoutY(270) ;
+            lbCompound04.setLayoutX(160);
+
+            TextField tfCompound01 = new TextField();
+            tfCompound01.setLayoutY(120);
+            tfCompound01.setLayoutX(330);
+
+            TextField tfCompound02 = new TextField();
+            tfCompound02.setLayoutY(170);
+            tfCompound02.setLayoutX(330);
+
+            TextField tfCompound03 = new TextField();
+            tfCompound03.setLayoutY(220);
+            tfCompound03.setLayoutX(330);
+
+            TextField tfCompound04 = new TextField();
+            tfCompound04.setLayoutY(270);
+            tfCompound04.setLayoutX(330);
+
+            Button btnCompound01= new Button("Calculate");
+            btnCompound01.setLayoutX(370);
+            btnCompound01.setLayoutY(315);
+            btnCompound01.setPrefHeight(40);
+            btnCompound01.setPrefWidth(100);
+
+            Rectangle borderKeyboard = new Rectangle();
+            borderKeyboard.setX(160);
+            borderKeyboard.setY(485);
+            borderKeyboard.setWidth(375);
+            borderKeyboard.setHeight(100);
+
+            final Scene scene=new Scene(root, 1000,600 );
+            //keyboard
+            Button KeyboardInput01= new Button("0");
+            KeyboardInput01.setLayoutX(280);
+            KeyboardInput01.setLayoutY(495);
+            KeyboardInput01.setPrefHeight(35);
+            KeyboardInput01.setPrefWidth(35);
+            KeyboardInput01.setFocusTraversable(false);
+
+            KeyboardInput01.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput01.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput02= new Button("1");
+            KeyboardInput02.setLayoutX(330);
+            KeyboardInput02.setLayoutY(495);
+            KeyboardInput02.setPrefHeight(35);
+            KeyboardInput02.setPrefWidth(35);
+            KeyboardInput02.setFocusTraversable(false);
+
+            KeyboardInput02.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput02.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput03= new Button("2");
+            KeyboardInput03.setLayoutX(380);
+            KeyboardInput03.setLayoutY(495);
+            KeyboardInput03.setPrefHeight(35);
+            KeyboardInput03.setPrefWidth(35);
+            KeyboardInput03.setFocusTraversable(false);
+
+            KeyboardInput03.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput03.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput04= new Button("3");
+            KeyboardInput04.setLayoutX(430);
+            KeyboardInput04.setLayoutY(495);
+            KeyboardInput04.setPrefHeight(35);
+            KeyboardInput04.setPrefWidth(35);
+            KeyboardInput04.setFocusTraversable(false);
+
+            KeyboardInput04.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput04.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput05= new Button("4");
+            KeyboardInput05.setLayoutX(480);
+            KeyboardInput05.setLayoutY(495);
+            KeyboardInput05.setPrefHeight(35);
+            KeyboardInput05.setPrefWidth(35);
+            KeyboardInput05.setFocusTraversable(false);
+
+            KeyboardInput05.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput05.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+//break
+            Button KeyboardInput06= new Button("5");
+            KeyboardInput06.setLayoutX(280);
+            KeyboardInput06.setLayoutY(540);
+            KeyboardInput06.setPrefHeight(35);
+            KeyboardInput06.setPrefWidth(35);
+            KeyboardInput06.setFocusTraversable(false);
+
+            KeyboardInput06.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput06.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput07= new Button("6");
+            KeyboardInput07.setLayoutX(330);
+            KeyboardInput07.setLayoutY(540);
+            KeyboardInput07.setPrefHeight(35);
+            KeyboardInput07.setPrefWidth(35);
+            KeyboardInput07.setFocusTraversable(false);
+
+            KeyboardInput07.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput07.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput08= new Button("7");
+            KeyboardInput08.setLayoutX(380);
+            KeyboardInput08.setLayoutY(540);
+            KeyboardInput08.setPrefHeight(35);
+            KeyboardInput08.setPrefWidth(35);
+            KeyboardInput08.setFocusTraversable(false);
+
+            KeyboardInput08.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput08.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput09= new Button("8");
+            KeyboardInput09.setLayoutX(430);
+            KeyboardInput09.setLayoutY(540);
+            KeyboardInput09.setPrefHeight(35);
+            KeyboardInput09.setPrefWidth(35);
+            KeyboardInput09.setFocusTraversable(false);
+
+            KeyboardInput09.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput09.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput10= new Button("9");
+            KeyboardInput10.setLayoutX(480);
+            KeyboardInput10.setLayoutY(540);
+            KeyboardInput10.setPrefHeight(35);
+            KeyboardInput10.setPrefWidth(35);
+            KeyboardInput10.setFocusTraversable(false);
+
+            KeyboardInput10.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput10.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+
+            Button KeyboardInput11= new Button("C");
+            KeyboardInput11.setLayoutX(180);
+            KeyboardInput11.setLayoutY(495);
+            KeyboardInput11.setPrefHeight(35);
+            KeyboardInput11.setPrefWidth(35);
+            KeyboardInput11.setFocusTraversable(false);
+
+            KeyboardInput11.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (((TextInputControl) fod).getLength() >= 1){
+                    ((TextInputControl) fod).clear();
+                }
+            });
+
+            Button KeyboardInput12= new Button(".");
+            KeyboardInput12.setLayoutX(230);
+            KeyboardInput12.setLayoutY(495);
+            KeyboardInput12.setPrefHeight(35);
+            KeyboardInput12.setPrefWidth(35);
+            KeyboardInput12.setFocusTraversable(false);
+
+            KeyboardInput12.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput12.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput13= new Button("Back");
+            KeyboardInput13.setLayoutX(180);
+            KeyboardInput13.setLayoutY(540);
+            KeyboardInput13.setPrefHeight(35);
+            KeyboardInput13.setPrefWidth(84);
+            KeyboardInput13.setFocusTraversable(false);
+            KeyboardInput13.setOnAction(eventE -> {
+                Node fod = scene.getFocusOwner();
+                if (((TextInputControl) fod).getLength() > 0){
+                    ((TextInputControl) fod).replaceSelection(((TextInputControl) fod).getText(0, ((TextInputControl) fod).getText().length()-1));
+
+                }
+            });
+
+//keyboard
+
+            root.getChildren().addAll(backgroundCompound);
+            root.getChildren().add(borderKeyboard);
+            root.getChildren().add(btnCompound01);
+            root.getChildren().add(KeyboardInput01);
+            root.getChildren().add(KeyboardInput02);
+            root.getChildren().add(KeyboardInput03);
+            root.getChildren().add(KeyboardInput04);
+            root.getChildren().add(KeyboardInput05);
+            root.getChildren().add(KeyboardInput06);
+            root.getChildren().add(KeyboardInput07);
+            root.getChildren().add(KeyboardInput08);
+            root.getChildren().add(KeyboardInput09);
+            root.getChildren().add(KeyboardInput10);
+            root.getChildren().add(KeyboardInput11);
+            root.getChildren().add(KeyboardInput12);
+            root.getChildren().add(KeyboardInput13);
+
+            root.getChildren().add(tfCompound01);
+            root.getChildren().add(tfCompound02);
+            root.getChildren().add(tfCompound03);
+            root.getChildren().add(tfCompound04);
+            root.getChildren().add(lbCompound01);
+            root.getChildren().add(lbCompound02);
+            root.getChildren().add(lbCompound03);
+            root.getChildren().add(lbCompound04);
+            root.getChildren().add(TopicCompoundTopic);
+
+            primaryStage.setTitle("COMPOUND SAVING CALCULATOR");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+
+        });
+        btnclick7.setOnAction(event -> {
+            Stage mainWindow=(Stage) btnclick7.getScene().getWindow();
+            mainWindow.close();
+            Pane root = new Pane();
+
+            Image image4=new Image("file:one.png");
+            ImageView background4=new ImageView(image4);
+
+            Label TopicFinance= new Label("FINANCE CALCULATOR");
+            TopicFinance.setLayoutY(15) ;
+            TopicFinance.setLayoutX(160);
+
+            Label lblFinanceFv01 = new Label("Start Principal");
+            lblFinanceFv01.setLayoutY(110);
+            lblFinanceFv01.setLayoutX(160);
+
+            Label lblFinanceFv02 = new Label("No of periods");
+            lblFinanceFv02.setLayoutY(160);
+            lblFinanceFv02.setLayoutX(160);
+
+            Label lblFinanceFv03 = new Label("Annual Interest");
+            lblFinanceFv03.setLayoutY(210);
+            lblFinanceFv03.setLayoutX(160);
+
+            Label lblFinanceFv04 = new Label("Future Value");
+            lblFinanceFv04.setLayoutY(260);
+            lblFinanceFv04.setLayoutX(160);
+
+            Label lblFinanceFv05 = new Label("Time (Years)");
+            lblFinanceFv05.setLayoutY(310);
+            lblFinanceFv05.setLayoutX(160);
+
+            Label lbOutputDisplay = new Label();
+            lbOutputDisplay.setLayoutY(410);
+            lbOutputDisplay.setLayoutX(320);
+
+            Label lbOutputDisplayValue = new Label("Output : ");
+            lbOutputDisplayValue.setLayoutY(410);
+            lbOutputDisplayValue.setLayoutX(160);
+
+            TextField tbFinanceFv01 = new TextField();
+            tbFinanceFv01.setLayoutY(110);
+            tbFinanceFv01.setLayoutX(320);
+
+            TextField tbFinanceFv02 = new TextField();
+            tbFinanceFv02.setLayoutY(160);
+            tbFinanceFv02.setLayoutX(320);
+
+            TextField tbFinanceFv03 = new TextField();
+            tbFinanceFv03.setLayoutY(210);
+            tbFinanceFv03.setLayoutX(320);
+
+            TextField tbFinanceFv04 = new TextField();
+            tbFinanceFv04.setLayoutY(260);
+            tbFinanceFv04.setLayoutX(320);
+
+            TextField tbFinanceFv05 = new TextField();
+            tbFinanceFv05.setLayoutY(310);
+            tbFinanceFv05.setLayoutX(320);
+
+            Button btnClickFinance01= new Button("Calculate");
+            btnClickFinance01.setLayoutX(360);
+            btnClickFinance01.setLayoutY(360);
+
+            btnClickFinance01.setOnAction(event1 -> {
+
+
+                String valueForStartPrincipal = tbFinanceFv01.getText();
+                String valueForNoOfPeriods = tbFinanceFv02.getText();
+                String valueForAnnualInterest = tbFinanceFv03.getText();
+                String valueForFutureValue = tbFinanceFv04.getText();
+                String valueForFutureTime = tbFinanceFv05.getText();
+                int countValueForSpace = 0;
+                if (valueForStartPrincipal.equals("") ){
+                    countValueForSpace +=1;
+                }
+                if (valueForNoOfPeriods.equals("") ){
+                    countValueForSpace +=1;
+                }
+                if (valueForAnnualInterest.equals("") ){
+                    countValueForSpace +=1;
+                }
+                if (valueForFutureValue.equals("") ){
+                    countValueForSpace +=1;
+                }
+                if (valueForFutureTime.equals("") ){
+                    countValueForSpace +=1;
+                }
+                if (countValueForSpace >1 || countValueForSpace ==5) {
+                    lbOutputDisplay.setText("ERROR");
+                }else if (valueForStartPrincipal.equals("") || countValueForSpace==1 ){
+
+                    /*String str01=valueForStartPrincipal;
+                    double finishValueForStartPrincipal=Double.parseDouble(str01);*/
+
+                    String str02=valueForNoOfPeriods;
+                    int finishValueForNoOfPeriods=Integer.parseInt(str02);
+
+                    String str03=valueForAnnualInterest;
+                    int finishValueForAnnualInterest=Integer.parseInt(str03);
+
+                    String str04=valueForFutureValue;
+                    double finishValueForFutureValue=Double.parseDouble(str04);
+
+                    String str05=valueForFutureTime;
+                    int finishValueForFutureTime=Integer.parseInt(str05);
+
+                    int power=finishValueForFutureTime*finishValueForNoOfPeriods;
+
+                    double finelPricipalValue = finishValueForFutureValue/Math.pow(((1+(finishValueForAnnualInterest/finishValueForNoOfPeriods))),power);
+
+
+                String xxx=String.valueOf(finelPricipalValue);
+
+                    lbOutputDisplay.setText(xxx);
+                }
+
+                else if (valueForFutureValue.equals("") || countValueForSpace==1 ){
+                    String str011=valueForStartPrincipal;
+                    double finishValueForStartPrincipal1=Double.parseDouble(str011);
+
+                    String str022=valueForNoOfPeriods;
+                    int finishValueForNoOfPeriods1=Integer.parseInt(str022);
+
+                    String str033=valueForAnnualInterest;
+                    int finishValueForAnnualInterest1=Integer.parseInt(str033);
+
+                    /*String str04=valueForFutureValue;
+                    double finishValueForFutureValue=Double.parseDouble(str04);*/
+
+                    String str055=valueForFutureTime;
+                    int finishValueForFutureTime1=Integer.parseInt(str055);
+
+                    int powers=finishValueForFutureTime1*(finishValueForNoOfPeriods1*12*finishValueForFutureTime1);
+
+
+                    double finelFutureValue = finishValueForStartPrincipal1/Math.pow((1+(finishValueForAnnualInterest1/(finishValueForNoOfPeriods1*finishValueForFutureTime1*12))),powers);
+
+                    String xxxx=String.valueOf(finelFutureValue);
+
+                    lbOutputDisplay.setText(xxxx);
+                }
+
+
+            });
+
+
+
+
+
+            final Scene scene2=new Scene(root, 1000,600 );
+            //keyboard
+            Button KeyboardInput01= new Button("0");
+
+            KeyboardInput01.setLayoutX(280);
+            KeyboardInput01.setLayoutY(495);
+            KeyboardInput01.setPrefHeight(35);
+            KeyboardInput01.setPrefWidth(35);
+            KeyboardInput01.setFocusTraversable(false);
+
+            KeyboardInput01.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput01.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput02= new Button("1");
+            KeyboardInput02.setLayoutX(330);
+            KeyboardInput02.setLayoutY(495);
+            KeyboardInput02.setPrefHeight(35);
+            KeyboardInput02.setPrefWidth(35);
+            KeyboardInput02.setFocusTraversable(false);
+
+            KeyboardInput02.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput02.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput03= new Button("2");
+            KeyboardInput03.setLayoutX(380);
+            KeyboardInput03.setLayoutY(495);
+            KeyboardInput03.setPrefHeight(35);
+            KeyboardInput03.setPrefWidth(35);
+            KeyboardInput03.setFocusTraversable(false);
+
+            KeyboardInput03.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput03.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput04= new Button("3");
+            KeyboardInput04.setLayoutX(430);
+            KeyboardInput04.setLayoutY(495);
+            KeyboardInput04.setPrefHeight(35);
+            KeyboardInput04.setPrefWidth(35);
+            KeyboardInput04.setFocusTraversable(false);
+
+            KeyboardInput04.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput04.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput05= new Button("4");
+            KeyboardInput05.setLayoutX(480);
+            KeyboardInput05.setLayoutY(495);
+            KeyboardInput05.setPrefHeight(35);
+            KeyboardInput05.setPrefWidth(35);
+            KeyboardInput05.setFocusTraversable(false);
+
+            KeyboardInput05.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput05.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+//break
+            Button KeyboardInput06= new Button("5");
+            KeyboardInput06.setLayoutX(280);
+            KeyboardInput06.setLayoutY(540);
+            KeyboardInput06.setPrefHeight(35);
+            KeyboardInput06.setPrefWidth(35);
+            KeyboardInput06.setFocusTraversable(false);
+
+            KeyboardInput06.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput06.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput07= new Button("6");
+            KeyboardInput07.setLayoutX(330);
+            KeyboardInput07.setLayoutY(540);
+            KeyboardInput07.setPrefHeight(35);
+            KeyboardInput07.setPrefWidth(35);
+            KeyboardInput07.setFocusTraversable(false);
+
+            KeyboardInput07.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput07.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput08= new Button("7");
+            KeyboardInput08.setLayoutX(380);
+            KeyboardInput08.setLayoutY(540);
+            KeyboardInput08.setPrefHeight(35);
+            KeyboardInput08.setPrefWidth(35);
+            KeyboardInput08.setFocusTraversable(false);
+
+            KeyboardInput08.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput08.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput09= new Button("8");
+            KeyboardInput09.setLayoutX(430);
+            KeyboardInput09.setLayoutY(540);
+            KeyboardInput09.setPrefHeight(35);
+            KeyboardInput09.setPrefWidth(35);
+            KeyboardInput09.setFocusTraversable(false);
+
+            KeyboardInput09.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput09.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput10= new Button("9");
+            KeyboardInput10.setLayoutX(480);
+            KeyboardInput10.setLayoutY(540);
+            KeyboardInput10.setPrefHeight(35);
+            KeyboardInput10.setPrefWidth(35);
+            KeyboardInput10.setFocusTraversable(false);
+
+            KeyboardInput10.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput10.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+
+            Button KeyboardInput11= new Button("C");
+            KeyboardInput11.setLayoutX(180);
+            KeyboardInput11.setLayoutY(495);
+            KeyboardInput11.setPrefHeight(35);
+            KeyboardInput11.setPrefWidth(35);
+            KeyboardInput11.setFocusTraversable(false);
+
+            KeyboardInput11.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (((TextInputControl) fod).getLength() >= 1){
+                    ((TextInputControl) fod).clear();
+                }
+            });
+
+            Button KeyboardInput12= new Button(".");
+            KeyboardInput12.setLayoutX(230);
+            KeyboardInput12.setLayoutY(495);
+            KeyboardInput12.setPrefHeight(35);
+            KeyboardInput12.setPrefWidth(35);
+            KeyboardInput12.setFocusTraversable(false);
+
+            KeyboardInput12.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput12.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput13= new Button("Back");
+            KeyboardInput13.setLayoutX(180);
+            KeyboardInput13.setLayoutY(540);
+            KeyboardInput13.setPrefHeight(35);
+            KeyboardInput13.setPrefWidth(84);
+            KeyboardInput13.setFocusTraversable(false);
+            KeyboardInput13.setOnAction(eventE -> {
+                Node fod = scene2.getFocusOwner();
+                if (((TextInputControl) fod).getLength() > 0){
+                    ((TextInputControl) fod).replaceSelection(((TextInputControl) fod).getText(0, ((TextInputControl) fod).getText().length()-1));
+
+                }
+            });
+
+//keyboard
+            root.getChildren().addAll(background4);
+            root.getChildren().add(btnClickFinance01);
+            root.getChildren().add(lbOutputDisplay);
+            root.getChildren().add(lbOutputDisplayValue); //remove
+            root.getChildren().add(TopicFinance);
+            root.getChildren().add(KeyboardInput01);
+            root.getChildren().add(KeyboardInput02);
+            root.getChildren().add(KeyboardInput03);
+            root.getChildren().add(KeyboardInput04);
+            root.getChildren().add(KeyboardInput05);
+            root.getChildren().add(KeyboardInput06);
+            root.getChildren().add(KeyboardInput07);
+            root.getChildren().add(KeyboardInput08);
+            root.getChildren().add(KeyboardInput09);
+            root.getChildren().add(KeyboardInput10);
+            root.getChildren().add(KeyboardInput11);
+            root.getChildren().add(KeyboardInput12);
+            root.getChildren().add(KeyboardInput13);
+            root.getChildren().add(lblFinanceFv01);
+            root.getChildren().add(lblFinanceFv02);
+            root.getChildren().add(lblFinanceFv03);
+            root.getChildren().add(lblFinanceFv04);
+            root.getChildren().add(lblFinanceFv05);
+
+            root.getChildren().add(tbFinanceFv01);
+            root.getChildren().add(tbFinanceFv02);
+            root.getChildren().add(tbFinanceFv03);
+            root.getChildren().add(tbFinanceFv04);
+            root.getChildren().add(tbFinanceFv05);
+
+
+
+            primaryStage.setTitle("FINANCE CALCULATOR");
+            primaryStage.setScene(scene2);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+        });
+
+        btnclick2.setOnAction(event -> {
+
+            Stage mainWindow=(Stage) btnclick2.getScene().getWindow();
+            mainWindow.close();
+            Pane root = new Pane();
+            Image image2=new Image("file:two.png");
+            ImageView background2=new ImageView(image2);
+
+            Label TopicAutoLoanTopic= new Label("AUTO LOAN CALCULATOR");
+            TopicAutoLoanTopic.setLayoutY(25) ;
+            TopicAutoLoanTopic.setLayoutX(160);
+            TopicAutoLoanTopic.setFont(Font.font("Times New Roman", FontWeight.BOLD, 42));
+
+            Label lbAutoLoan01= new Label("Auto Price");
+            lbAutoLoan01.setLayoutY(120) ;
+            lbAutoLoan01.setLayoutX(160);
+
+            Label lbAutoLoan02= new Label("Loan Term");
+            lbAutoLoan02.setLayoutY(170) ;
+            lbAutoLoan02.setLayoutX(160);
+
+            Label lbAutoLoan03= new Label("Interest Rate");
+            lbAutoLoan03.setLayoutY(220) ;
+            lbAutoLoan03.setLayoutX(160);
+
+            Label lbAutoLoan04= new Label("Down Payment");
+            lbAutoLoan04.setLayoutY(270) ;
+            lbAutoLoan04.setLayoutX(160);
+
+            TextField tfAutoLoan01 = new TextField();
+            tfAutoLoan01.setLayoutY(120);
+            tfAutoLoan01.setLayoutX(310);
+
+            TextField tfAutoLoan02 = new TextField();
+            tfAutoLoan02.setLayoutY(170);
+            tfAutoLoan02.setLayoutX(310);
+
+            TextField tfAutoLoan03 = new TextField();
+            tfAutoLoan03.setLayoutY(220);
+            tfAutoLoan03.setLayoutX(310);
+
+            TextField tfAutoLoan04 = new TextField();
+            tfAutoLoan04.setLayoutY(270);
+            tfAutoLoan04.setLayoutX(310);
+
+            Button btnClickAutoLoan01= new Button("Calculate");
+            btnClickAutoLoan01.setLayoutX(360);
+            btnClickAutoLoan01.setLayoutY(320);
+
+            Label lblClickAutoLoanOutput1 = new Label("Monthly Pay :    $");
+            lblClickAutoLoanOutput1.setLayoutY(390);
+            lblClickAutoLoanOutput1.setLayoutX(160);
+
+            Label lblClickAutoLoanOutput2 = new Label("xx");
+            lblClickAutoLoanOutput2.setLayoutY(390);
+            lblClickAutoLoanOutput2.setLayoutX(340);
+
+
+            final Scene scene3=new Scene(root, 1000,600 );
+            //keyboard
+            Button KeyboardInput01= new Button("0");
+
+            KeyboardInput01.setLayoutX(280);
+            KeyboardInput01.setLayoutY(495);
+            KeyboardInput01.setPrefHeight(35);
+            KeyboardInput01.setPrefWidth(35);
+            KeyboardInput01.setFocusTraversable(false);
+
+            KeyboardInput01.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput01.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput02= new Button("1");
+            KeyboardInput02.setLayoutX(330);
+            KeyboardInput02.setLayoutY(495);
+            KeyboardInput02.setPrefHeight(35);
+            KeyboardInput02.setPrefWidth(35);
+            KeyboardInput02.setFocusTraversable(false);
+
+            KeyboardInput02.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput02.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput03= new Button("2");
+            KeyboardInput03.setLayoutX(380);
+            KeyboardInput03.setLayoutY(495);
+            KeyboardInput03.setPrefHeight(35);
+            KeyboardInput03.setPrefWidth(35);
+            KeyboardInput03.setFocusTraversable(false);
+
+            KeyboardInput03.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput03.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput04= new Button("3");
+            KeyboardInput04.setLayoutX(430);
+            KeyboardInput04.setLayoutY(495);
+            KeyboardInput04.setPrefHeight(35);
+            KeyboardInput04.setPrefWidth(35);
+            KeyboardInput04.setFocusTraversable(false);
+
+            KeyboardInput04.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput04.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput05= new Button("4");
+            KeyboardInput05.setLayoutX(480);
+            KeyboardInput05.setLayoutY(495);
+            KeyboardInput05.setPrefHeight(35);
+            KeyboardInput05.setPrefWidth(35);
+            KeyboardInput05.setFocusTraversable(false);
+
+            KeyboardInput05.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput05.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+//break
+            Button KeyboardInput06= new Button("5");
+            KeyboardInput06.setLayoutX(280);
+            KeyboardInput06.setLayoutY(540);
+            KeyboardInput06.setPrefHeight(35);
+            KeyboardInput06.setPrefWidth(35);
+            KeyboardInput06.setFocusTraversable(false);
+
+            KeyboardInput06.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput06.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput07= new Button("6");
+            KeyboardInput07.setLayoutX(330);
+            KeyboardInput07.setLayoutY(540);
+            KeyboardInput07.setPrefHeight(35);
+            KeyboardInput07.setPrefWidth(35);
+            KeyboardInput07.setFocusTraversable(false);
+
+            KeyboardInput07.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput07.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput08= new Button("7");
+            KeyboardInput08.setLayoutX(380);
+            KeyboardInput08.setLayoutY(540);
+            KeyboardInput08.setPrefHeight(35);
+            KeyboardInput08.setPrefWidth(35);
+            KeyboardInput08.setFocusTraversable(false);
+
+            KeyboardInput08.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput08.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput09= new Button("8");
+            KeyboardInput09.setLayoutX(430);
+            KeyboardInput09.setLayoutY(540);
+            KeyboardInput09.setPrefHeight(35);
+            KeyboardInput09.setPrefWidth(35);
+            KeyboardInput09.setFocusTraversable(false);
+
+            KeyboardInput09.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput09.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput10= new Button("9");
+            KeyboardInput10.setLayoutX(480);
+            KeyboardInput10.setLayoutY(540);
+            KeyboardInput10.setPrefHeight(35);
+            KeyboardInput10.setPrefWidth(35);
+            KeyboardInput10.setFocusTraversable(false);
+
+            KeyboardInput10.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput10.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+
+            Button KeyboardInput11= new Button("C");
+            KeyboardInput11.setLayoutX(180);
+            KeyboardInput11.setLayoutY(495);
+            KeyboardInput11.setPrefHeight(35);
+            KeyboardInput11.setPrefWidth(35);
+            KeyboardInput11.setFocusTraversable(false);
+
+            KeyboardInput11.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (((TextInputControl) fod).getLength() >= 1){
+                    ((TextInputControl) fod).clear();
+                }
+            });
+
+            Button KeyboardInput12= new Button(".");
+            KeyboardInput12.setLayoutX(230);
+            KeyboardInput12.setLayoutY(495);
+            KeyboardInput12.setPrefHeight(35);
+            KeyboardInput12.setPrefWidth(35);
+            KeyboardInput12.setFocusTraversable(false);
+
+            KeyboardInput12.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput12.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput13= new Button("Back");
+            KeyboardInput13.setLayoutX(180);
+            KeyboardInput13.setLayoutY(540);
+            KeyboardInput13.setPrefHeight(35);
+            KeyboardInput13.setPrefWidth(84);
+            KeyboardInput13.setFocusTraversable(false);
+            KeyboardInput13.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (((TextInputControl) fod).getLength() > 0){
+                    ((TextInputControl) fod).replaceSelection(((TextInputControl) fod).getText(0, ((TextInputControl) fod).getText().length()-1));
+
+                }
+            });
+//keyboard
+            root.getChildren().addAll(background2);
+            root.getChildren().add(TopicAutoLoanTopic);
+            root.getChildren().add(KeyboardInput01);
+            root.getChildren().add(KeyboardInput02);
+            root.getChildren().add(KeyboardInput03);
+            root.getChildren().add(KeyboardInput04);
+            root.getChildren().add(KeyboardInput05);
+            root.getChildren().add(KeyboardInput06);
+            root.getChildren().add(KeyboardInput07);
+            root.getChildren().add(KeyboardInput08);
+            root.getChildren().add(KeyboardInput09);
+            root.getChildren().add(KeyboardInput10);
+            root.getChildren().add(KeyboardInput11);
+            root.getChildren().add(KeyboardInput12);
+            root.getChildren().add(KeyboardInput13);
+            root.getChildren().add(btnClickAutoLoan01);
+            root.getChildren().add(lblClickAutoLoanOutput1);
+            root.getChildren().add(lblClickAutoLoanOutput2);
+            root.getChildren().add(lbAutoLoan01);
+            root.getChildren().add(lbAutoLoan02);
+            root.getChildren().add(lbAutoLoan03);
+            root.getChildren().add(lbAutoLoan04);
+            root.getChildren().add(tfAutoLoan01);
+            root.getChildren().add(tfAutoLoan02);
+            root.getChildren().add(tfAutoLoan03);
+            root.getChildren().add(tfAutoLoan04);
+
+            primaryStage.setTitle("AUTO LOAN CALCULATOR");
+            primaryStage.setScene(scene3);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+
+        });
+
+        btnclick3.setOnAction(event -> {
+
+            Stage mainWindow=(Stage) btnclick3.getScene().getWindow();
+            mainWindow.close();
+            Pane root = new Pane();
+            Image image3=new Image("file:three.png");
+            ImageView background3=new ImageView(image3);
+
+            Label TopicMortgage= new Label("MORTGAGE CALCULATOR");
+            TopicMortgage.setLayoutY(25) ;
+            TopicMortgage.setLayoutX(160);
+            TopicMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 42));
+
+
+            Label lblMortgage01 = new Label("Home Price");
+            lblMortgage01.setLayoutY(120);
+            lblMortgage01.setLayoutX(160);
+
+
+            Label lblMortgage02 = new Label("Down Payment");
+            lblMortgage02.setLayoutY(170);
+            lblMortgage02.setLayoutX(160);
+
+            Label lblMortgage03 = new Label("Loan Term");
+            lblMortgage03.setLayoutY(220);
+            lblMortgage03.setLayoutX(160);
+
+            Label lblMortgage04 = new Label("Interest Rate");
+            lblMortgage04.setLayoutY(270);
+            lblMortgage04.setLayoutX(160);
+
+            Label lblMortgage05 = new Label("Start Date");
+            lblMortgage05.setLayoutY(320);
+            lblMortgage05.setLayoutX(160);
+
+            Label lblMortgageOutput1 = new Label("Monthly Pay :  $");
+            lblMortgageOutput1.setLayoutY(430);
+            lblMortgageOutput1.setLayoutX(160);
+
+            Label lblMortgageOutput2 = new Label("xx");
+            lblMortgageOutput2.setLayoutY(430);
+            lblMortgageOutput2.setLayoutX(320);
+
+            TextField tfMortgage01 = new TextField();
+            tfMortgage01.setLayoutY(120);
+            tfMortgage01.setLayoutX(330);
+
+            TextField tfMortgage02 = new TextField();
+            tfMortgage02.setLayoutY(170);
+            tfMortgage02.setLayoutX(330);
+
+            TextField tfMortgage03 = new TextField();
+            tfMortgage03.setLayoutY(220);
+            tfMortgage03.setLayoutX(330);
+
+            TextField tfMortgage04 = new TextField();
+            tfMortgage04.setLayoutY(270);
+            tfMortgage04.setLayoutX(330);
+
+            TextField tfMortgage05 = new TextField();
+            tfMortgage05.setLayoutY(320);
+            tfMortgage05.setLayoutX(330);
+            tfMortgage05.setPrefWidth(96);
+
+            Button btnClickMortgage01= new Button("Calculate");
+            btnClickMortgage01.setLayoutX(380);
+            btnClickMortgage01.setLayoutY(370);
+
+
+
+            final Scene scene3=new Scene(root, 1000,600 );
+            //keyboard
+            Button KeyboardInput01= new Button("0");
+
+            KeyboardInput01.setLayoutX(280);
+            KeyboardInput01.setLayoutY(495);
+            KeyboardInput01.setPrefHeight(35);
+            KeyboardInput01.setPrefWidth(35);
+            KeyboardInput01.setFocusTraversable(false);
+
+            KeyboardInput01.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput01.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput02= new Button("1");
+            KeyboardInput02.setLayoutX(330);
+            KeyboardInput02.setLayoutY(495);
+            KeyboardInput02.setPrefHeight(35);
+            KeyboardInput02.setPrefWidth(35);
+            KeyboardInput02.setFocusTraversable(false);
+
+            KeyboardInput02.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput02.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput03= new Button("2");
+            KeyboardInput03.setLayoutX(380);
+            KeyboardInput03.setLayoutY(495);
+            KeyboardInput03.setPrefHeight(35);
+            KeyboardInput03.setPrefWidth(35);
+            KeyboardInput03.setFocusTraversable(false);
+
+            KeyboardInput03.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput03.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput04= new Button("3");
+            KeyboardInput04.setLayoutX(430);
+            KeyboardInput04.setLayoutY(495);
+            KeyboardInput04.setPrefHeight(35);
+            KeyboardInput04.setPrefWidth(35);
+            KeyboardInput04.setFocusTraversable(false);
+
+            KeyboardInput04.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput04.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput05= new Button("4");
+            KeyboardInput05.setLayoutX(480);
+            KeyboardInput05.setLayoutY(495);
+            KeyboardInput05.setPrefHeight(35);
+            KeyboardInput05.setPrefWidth(35);
+            KeyboardInput05.setFocusTraversable(false);
+
+            KeyboardInput05.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput05.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+//break
+            Button KeyboardInput06= new Button("5");
+            KeyboardInput06.setLayoutX(280);
+            KeyboardInput06.setLayoutY(540);
+            KeyboardInput06.setPrefHeight(35);
+            KeyboardInput06.setPrefWidth(35);
+            KeyboardInput06.setFocusTraversable(false);
+
+            KeyboardInput06.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput06.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput07= new Button("6");
+            KeyboardInput07.setLayoutX(330);
+            KeyboardInput07.setLayoutY(540);
+            KeyboardInput07.setPrefHeight(35);
+            KeyboardInput07.setPrefWidth(35);
+            KeyboardInput07.setFocusTraversable(false);
+
+            KeyboardInput07.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput07.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput08= new Button("7");
+            KeyboardInput08.setLayoutX(380);
+            KeyboardInput08.setLayoutY(540);
+            KeyboardInput08.setPrefHeight(35);
+            KeyboardInput08.setPrefWidth(35);
+            KeyboardInput08.setFocusTraversable(false);
+
+            KeyboardInput08.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput08.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput09= new Button("8");
+            KeyboardInput09.setLayoutX(430);
+            KeyboardInput09.setLayoutY(540);
+            KeyboardInput09.setPrefHeight(35);
+            KeyboardInput09.setPrefWidth(35);
+            KeyboardInput09.setFocusTraversable(false);
+
+            KeyboardInput09.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput09.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput10= new Button("9");
+            KeyboardInput10.setLayoutX(480);
+            KeyboardInput10.setLayoutY(540);
+            KeyboardInput10.setPrefHeight(35);
+            KeyboardInput10.setPrefWidth(35);
+            KeyboardInput10.setFocusTraversable(false);
+
+            KeyboardInput10.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput10.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+
+            Button KeyboardInput11= new Button("C");
+            KeyboardInput11.setLayoutX(180);
+            KeyboardInput11.setLayoutY(495);
+            KeyboardInput11.setPrefHeight(35);
+            KeyboardInput11.setPrefWidth(35);
+            KeyboardInput11.setFocusTraversable(false);
+
+            KeyboardInput11.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (((TextInputControl) fod).getLength() >= 1){
+                    ((TextInputControl) fod).clear();
+                }
+            });
+
+            Button KeyboardInput12= new Button(".");
+            KeyboardInput12.setLayoutX(230);
+            KeyboardInput12.setLayoutY(495);
+            KeyboardInput12.setPrefHeight(35);
+            KeyboardInput12.setPrefWidth(35);
+            KeyboardInput12.setFocusTraversable(false);
+
+            KeyboardInput12.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (fod instanceof TextInputControl) {
+                    enterNumber = KeyboardInput12.getText();
+                    ((TextInputControl) fod).replaceSelection(enterNumber);
+                }
+            });
+
+            Button KeyboardInput13= new Button("Back");
+            KeyboardInput13.setLayoutX(180);
+            KeyboardInput13.setLayoutY(540);
+            KeyboardInput13.setPrefHeight(35);
+            KeyboardInput13.setPrefWidth(84);
+            KeyboardInput13.setFocusTraversable(false);
+            KeyboardInput13.setOnAction(eventE -> {
+                Node fod = scene3.getFocusOwner();
+                if (((TextInputControl) fod).getLength() > 0){
+                    ((TextInputControl) fod).replaceSelection(((TextInputControl) fod).getText(0, ((TextInputControl) fod).getText().length()-1));
+
+                }
+            });
+//keyboard
+
+            ComboBox<String> comboMortage01 = new ComboBox<String>();
+            comboMortage01.getItems().add(0,"Jan");
+            comboMortage01.getItems().add(1,"Feb");
+            comboMortage01.getItems().add(2,"Mar");
+            comboMortage01.getItems().add(3,"Apr");
+            comboMortage01.getItems().add(4,"May");
+            comboMortage01.getItems().add(5,"Jun");
+            comboMortage01.getItems().add(6,"Jul");
+            comboMortage01.getItems().add(7,"Aug");
+            comboMortage01.getItems().add(8,"Sep");
+            comboMortage01.getItems().add(9,"Oct");
+            comboMortage01.getItems().add(10,"Nov");
+            comboMortage01.getItems().add(11,"Dec");
+            comboMortage01.getSelectionModel().select(0);
+            comboMortage01.setLayoutY(320) ;
+            comboMortage01.setLayoutX(435);
+
+
+            root.getChildren().addAll(background3);
+            root.getChildren().add(TopicMortgage);
+
+            root.getChildren().add(KeyboardInput01);
+            root.getChildren().add(KeyboardInput02);
+            root.getChildren().add(KeyboardInput03);
+            root.getChildren().add(KeyboardInput04);
+            root.getChildren().add(KeyboardInput05);
+            root.getChildren().add(KeyboardInput06);
+            root.getChildren().add(KeyboardInput07);
+            root.getChildren().add(KeyboardInput08);
+            root.getChildren().add(KeyboardInput09);
+            root.getChildren().add(KeyboardInput10);
+            root.getChildren().add(KeyboardInput11);
+            root.getChildren().add(KeyboardInput12);
+            root.getChildren().add(KeyboardInput13);
+
+
+
+            root.getChildren().add(lblMortgage01);
+            root.getChildren().add(lblMortgage02);
+            root.getChildren().add(lblMortgage03);
+            root.getChildren().add(lblMortgage04);
+            root.getChildren().add(lblMortgage05);
+            root.getChildren().add(lblMortgageOutput1);
+            root.getChildren().add(lblMortgageOutput2);
+
+            root.getChildren().add(tfMortgage01);
+            root.getChildren().add(tfMortgage02);
+            root.getChildren().add(tfMortgage03);
+            root.getChildren().add(tfMortgage04);
+            root.getChildren().add(tfMortgage05);
+
+            root.getChildren().add(comboMortage01);
+            root.getChildren().add(btnClickMortgage01);
+
+            primaryStage.setTitle("Mortgage Calculator");
+            primaryStage.setScene(scene3);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+
+        });
+
+        btnExit.setOnAction(event -> {
+            Stage mainWindow=(Stage) btnExit.getScene().getWindow();
+            mainWindow.close();
+
+        });
+
+        Pane root = new Pane();
+        root.getChildren().addAll(background);
+        root.getChildren().add(btnclick1);
+        root.getChildren().add(btnclick2);
+        root.getChildren().add(btnclick3);
+
+        root.getChildren().add(btnHelp);
+        root.getChildren().add(btnExit);
+        root.getChildren().add(btnclick7);
+        root.getChildren().add(Topic);
+
+        primaryStage.setTitle("FINANCIAL CALCULATOR");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
+    }
+}
+
+
+/*  @Override
+            public void handle(ActionEvent event) {
+                Stage mainWindow=(Stage) btnclick7.getScene().getWindow();
+                mainWindow.close();
+                Pane root = new Pane();
+
+                TabPane tabPane = new TabPane();
+                tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
+
+                Tab tab1 = new Tab("FV");
+                Pane leftPane = new Pane();
+                tab1.setContent(leftPane);
+                tabPane.getTabs().add(tab1);
+
+                Label lblFinanceFv01 = new Label("No of periods");
+                leftPane.getChildren().add(lblFinanceFv01);
+                lblFinanceFv01.setLayoutY(50);
+                lblFinanceFv01.setLayoutX(10);
+
+                Label lblFinanceFv02 = new Label("Start Principal");
+                leftPane.getChildren().add(lblFinanceFv02);
+                lblFinanceFv02.setLayoutY(100);
+                lblFinanceFv02.setLayoutX(10);
+
+                Label lblFinanceFv03 = new Label("I/Y (Interest)");
+                leftPane.getChildren().add(lblFinanceFv03);
+                lblFinanceFv03.setLayoutY(150);
+                lblFinanceFv03.setLayoutX(10);
+
+                Label lblFinanceFv04 = new Label("PMT (Annuity Payment)");
+                leftPane.getChildren().add(lblFinanceFv04);
+                lblFinanceFv04.setLayoutY(200);
+                lblFinanceFv04.setLayoutX(10);
+
+                Label lblFinanceFv05 = new Label("PMT (PMT made at the)");
+                leftPane.getChildren().add(lblFinanceFv05);
+                lblFinanceFv05.setLayoutY(250);
+                lblFinanceFv05.setLayoutX(10);
+
+                Label lblFinanceFv06 = new Label("of each compound period");
+                leftPane.getChildren().add(lblFinanceFv06);
+                lblFinanceFv06.setLayoutY(250);
+                lblFinanceFv06.setLayoutX(400);
+
+
+                TextField tbFinanceFv01 = new TextField();
+                leftPane.getChildren().add(tbFinanceFv01);
+                tbFinanceFv01.setLayoutY(50);
+                tbFinanceFv01.setLayoutX(200);
+
+                TextField tbFinanceFv02 = new TextField();
+                leftPane.getChildren().add(tbFinanceFv02);
+                tbFinanceFv02.setLayoutY(100);
+                tbFinanceFv02.setLayoutX(200);
+
+                TextField tbFinanceFv03 = new TextField();
+                leftPane.getChildren().add(tbFinanceFv03);
+                tbFinanceFv03.setLayoutY(150);
+                tbFinanceFv03.setLayoutX(200);
+
+                TextField tbFinanceFv04 = new TextField();
+                leftPane.getChildren().add(tbFinanceFv04);
+                tbFinanceFv04.setLayoutY(200);
+                tbFinanceFv04.setLayoutX(200);
+
+                final ToggleGroup groupFv = new ToggleGroup();
+                RadioButton rb1 = new RadioButton("Beginning");
+                rb1.setToggleGroup(groupFv);
+                rb1.setLayoutX(200);
+                rb1.setLayoutY(250);
+
+                RadioButton rb2 = new RadioButton("End");
+                rb2.setToggleGroup(groupFv);
+                rb2.setLayoutX(320);
+                rb2.setLayoutY(250);
+
+                leftPane.getChildren().add(rb1);
+                leftPane.getChildren().add(rb2);
+
+                Label lblOutputresults = new Label("Results");
+                leftPane.getChildren().add(lblOutputresults);
+                lblOutputresults.setLayoutY(50);
+                lblOutputresults.setLayoutX(800);
+*/

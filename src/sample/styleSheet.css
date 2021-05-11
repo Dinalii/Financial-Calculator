@@ -1,0 +1,5 @@
+        #font-button {
+            -fx-font: bold italic 15pt "Arial";
+            -fx-effect: dropshadow( one-pass-box, black, 8, 0.0, 2, 0);
+            -fx-background-color: white;
+        }
