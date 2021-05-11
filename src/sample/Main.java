@@ -26,7 +26,7 @@ public class Main extends Application {
         Label Topic = new Label("FINANCIAL CALCULATOR");
         Topic.setLayoutY(25);
         Topic.setLayoutX(170);
-        Topic.setFont(Font.font("Times New Roman", FontWeight.BOLD, 42));
+        Topic.setFont(Font.font("Segoe UI", FontWeight.BOLD, 42));
 
         // entry button for the fixedSavings calculator
         Button entryButtonOfFixedSavingsCalculator = new Button("Savings (Fixed)");
@@ -95,52 +95,52 @@ public class Main extends Application {
 
             // labels of help view
             Label helpLine01 = new Label("Financial Calculator - 2020");
-            helpLine01.setFont(Font.font("Times New Roman", FontWeight.BOLD, 22));
+            helpLine01.setFont(Font.font("Segoe UI", FontWeight.BOLD, 22));
             helpLine01.setLayoutY(10);
             helpLine01.setLayoutX(20);
 
             Label helpLine02 = new Label("A financial calculator is a multi-purpose software for financial calculations.");
-            helpLine02.setFont(Font.font("Times New Roman", FontWeight.BOLD, 20));
+            helpLine02.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 20));
             helpLine02.setLayoutY(40);
             helpLine02.setLayoutX(20);
 
             Label helpLine03 = new Label("Savings (Fixed) Calculator ");
-            helpLine03.setFont(Font.font("Times New Roman", FontWeight.BOLD, 20));
+            helpLine03.setFont(Font.font("Segoe UI", FontWeight.BOLD, 20));
             helpLine03.setLayoutY(90);
             helpLine03.setLayoutX(20);
 
             Label helpLine04 = new Label("Savings (Fixed) Calculator can use to calculate the Start principal, Annual Interest, Future Value, and time of \nFixed deposit.Give 03 user inputs and press the calculate button to get the answer.");
-            helpLine04.setFont(Font.font("Times New Roman", FontWeight.BOLD, 15));
+            helpLine04.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 15));
             helpLine04.setLayoutY(110);
             helpLine04.setLayoutX(20);
 
             Label helpLine05 = new Label("Mortgage Calculator ");
-            helpLine05.setFont(Font.font("Times New Roman", FontWeight.BOLD, 20));
+            helpLine05.setFont(Font.font("Segoe UI", FontWeight.BOLD, 20));
             helpLine05.setLayoutY(160);
             helpLine05.setLayoutX(20);
 
             Label helpLine06 = new Label("Give all the inputs to the mortgage calculator and it will calculate the monthly payment. Do not keep empty text \nfields.");
-            helpLine06.setFont(Font.font("Times New Roman", FontWeight.BOLD, 15));
+            helpLine06.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 15));
             helpLine06.setLayoutY(180);
             helpLine06.setLayoutX(20);
 
             Label helpLine07 = new Label("Savings Calculator ");
-            helpLine07.setFont(Font.font("Times New Roman", FontWeight.BOLD, 20));
+            helpLine07.setFont(Font.font("Segoe UI", FontWeight.BOLD, 20));
             helpLine07.setLayoutY(230);
             helpLine07.setLayoutX(20);
 
             Label helpLine08 = new Label("It gives both future value and payment one by one. give the necessary data and press the calculate button.");
-            helpLine08.setFont(Font.font("Times New Roman", FontWeight.BOLD, 15));
+            helpLine08.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 15));
             helpLine08.setLayoutY(250);
             helpLine08.setLayoutX(20);
 
             Label helpLine09 = new Label("Auto Loan Calculator ");
-            helpLine09.setFont(Font.font("Times New Roman", FontWeight.BOLD, 20));
+            helpLine09.setFont(Font.font("Segoe UI", FontWeight.BOLD, 20));
             helpLine09.setLayoutY(280);
             helpLine09.setLayoutX(20);
 
             Label helpLine10 = new Label("Input all the data and it gives monthly payment as output answer.");
-            helpLine10.setFont(Font.font("Times New Roman", FontWeight.BOLD, 15));
+            helpLine10.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 15));
             helpLine10.setLayoutY(300);
             helpLine10.setLayoutX(20);
 
@@ -182,79 +182,79 @@ public class Main extends Application {
 
             // labels of fixed savings calculator
             Label topicOfFixedSavingsCalculator = new Label("Savings (Fixed) Calculator");
-            topicOfFixedSavingsCalculator.setFont(Font.font("Times New Roman", FontWeight.BOLD, 42));
+            topicOfFixedSavingsCalculator.setFont(Font.font("Segoe UI", FontWeight.BOLD, 42));
             topicOfFixedSavingsCalculator.setLayoutY(15);
             topicOfFixedSavingsCalculator.setLayoutX(200);
 
             Label labelOfFixedSavingsStartPrincipal = new Label("Start Principal");
             labelOfFixedSavingsStartPrincipal.setLayoutY(110);
             labelOfFixedSavingsStartPrincipal.setLayoutX(20);
-            labelOfFixedSavingsStartPrincipal.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfFixedSavingsStartPrincipal.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 18));
 
             Label labelOfFixedSavingsInterest = new Label("Annual Interest");
             labelOfFixedSavingsInterest.setLayoutY(160);
             labelOfFixedSavingsInterest.setLayoutX(20);
-            labelOfFixedSavingsInterest.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfFixedSavingsInterest.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 18));
 
             Label labelOfFixedSavingsFv = new Label("Future Value");
             labelOfFixedSavingsFv.setLayoutY(210);
             labelOfFixedSavingsFv.setLayoutX(20);
-            labelOfFixedSavingsFv.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfFixedSavingsFv.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
 
             Label labelOfFixedSavingsTime = new Label("Time (Years)");
             labelOfFixedSavingsTime.setLayoutY(260);
             labelOfFixedSavingsTime.setLayoutX(20);
-            labelOfFixedSavingsTime.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfFixedSavingsTime.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 18));
 
 
 
             Label labelOfFixedSavingsOutputValue = new Label();
             labelOfFixedSavingsOutputValue.setLayoutY(370);
             labelOfFixedSavingsOutputValue.setLayoutX(150);
-            labelOfFixedSavingsOutputValue.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfFixedSavingsOutputValue.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
 
 
             Label labelOfFixedSavingsOutputName = new Label();
             labelOfFixedSavingsOutputName.setLayoutY(370);
             labelOfFixedSavingsOutputName.setLayoutX(20);
-            labelOfFixedSavingsOutputName.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfFixedSavingsOutputName.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
 
             // text fields of fixed savings
             TextField textFieldOfFixedSavingsStartingPrincipal = new TextField();
             textFieldOfFixedSavingsStartingPrincipal.setLayoutY(110);
             textFieldOfFixedSavingsStartingPrincipal.setLayoutX(160);
-            textFieldOfFixedSavingsStartingPrincipal.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfFixedSavingsStartingPrincipal.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
             textFieldOfFixedSavingsStartingPrincipal.setPrefHeight(10);
             textFieldOfFixedSavingsStartingPrincipal.setPrefWidth(200);
 
             TextField textFieldOfFixedSavingsAnnualInterest = new TextField();
             textFieldOfFixedSavingsAnnualInterest.setLayoutY(160);
             textFieldOfFixedSavingsAnnualInterest.setLayoutX(160);
-            textFieldOfFixedSavingsAnnualInterest.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfFixedSavingsAnnualInterest.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
             textFieldOfFixedSavingsAnnualInterest.setPrefHeight(10);
             textFieldOfFixedSavingsAnnualInterest.setPrefWidth(200);
 
             TextField textFieldOfFixedSavingsFv = new TextField();
             textFieldOfFixedSavingsFv.setLayoutY(210);
             textFieldOfFixedSavingsFv.setLayoutX(160);
-            textFieldOfFixedSavingsFv.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfFixedSavingsFv.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
             textFieldOfFixedSavingsFv.setPrefHeight(10);
             textFieldOfFixedSavingsFv.setPrefWidth(200);
 
             TextField textFieldOfFixedSavingsTime = new TextField();
             textFieldOfFixedSavingsTime.setLayoutY(260);
             textFieldOfFixedSavingsTime.setLayoutX(160);
-            textFieldOfFixedSavingsTime.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfFixedSavingsTime.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
             textFieldOfFixedSavingsTime.setPrefHeight(10);
             textFieldOfFixedSavingsTime.setPrefWidth(200);
 
             Button CalculateButtonOfFixedSavings = new Button("Calculate");
             CalculateButtonOfFixedSavings.setLayoutX(220);
             CalculateButtonOfFixedSavings.setLayoutY(310);
-            textFieldOfFixedSavingsTime.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfFixedSavingsTime.setFont(Font.font("Segoe UI", FontWeight.BOLD, 19));
 
             // calculation logic of fixed saving calculator
             CalculateButtonOfFixedSavings.setOnAction(eventA2 -> {
@@ -689,44 +689,44 @@ public class Main extends Application {
             Label topicOfSavingsCalculator = new Label("Savings Calculator");
             topicOfSavingsCalculator.setLayoutY(25);
             topicOfSavingsCalculator.setLayoutX(250);
-            topicOfSavingsCalculator.setFont(Font.font("Times New Roman", FontWeight.BOLD, 42));
+            topicOfSavingsCalculator.setFont(Font.font("Segoe UI", FontWeight.BOLD, 42));
 
             //lebels of savings calculator
             Label labelOfSavingsPayment = new Label("Payment");
             labelOfSavingsPayment.setLayoutY(110);
             labelOfSavingsPayment.setLayoutX(20);
-            labelOfSavingsPayment.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfSavingsPayment.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
             Label labelOfSavingsInterest = new Label("Interest Rate");
             labelOfSavingsInterest.setLayoutY(160);
             labelOfSavingsInterest.setLayoutX(20);
-            labelOfSavingsInterest.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfSavingsInterest.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 18));
 
             Label labelOfSavingsFv = new Label("Future Value");
             labelOfSavingsFv.setLayoutY(210);
             labelOfSavingsFv.setLayoutX(20);
-            labelOfSavingsFv.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfSavingsFv.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
             Label labelOfSavingsTime = new Label("Time Period");
             labelOfSavingsTime.setLayoutY(260);
             labelOfSavingsTime.setLayoutX(20);
-            labelOfSavingsTime.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfSavingsTime.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
             Label labelOfSavingsOutputName = new Label("");
             labelOfSavingsOutputName.setLayoutY(370);
             labelOfSavingsOutputName.setLayoutX(20);
-            labelOfSavingsOutputName.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfSavingsOutputName.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
             Label labelOfSavingsOutputValue = new Label("");
             labelOfSavingsOutputValue.setLayoutY(370);
             labelOfSavingsOutputValue.setLayoutX(150);
-            labelOfSavingsOutputValue.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelOfSavingsOutputValue.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
             // text fields of saving calculator
             TextField textFieldOfSavingsPayment = new TextField();
             textFieldOfSavingsPayment.setLayoutY(110);
             textFieldOfSavingsPayment.setLayoutX(150);
-            textFieldOfSavingsPayment.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfSavingsPayment.setFont(Font.font("Segoe UI", FontWeight.BOLD, 19));
             textFieldOfSavingsPayment.setPrefHeight(10);
             textFieldOfSavingsPayment.setPrefWidth(200);
 
@@ -734,7 +734,7 @@ public class Main extends Application {
             TextField textFieldOfSavingsInterest = new TextField();
             textFieldOfSavingsInterest.setLayoutY(160);
             textFieldOfSavingsInterest.setLayoutX(150);
-            textFieldOfSavingsInterest.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfSavingsInterest.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
             textFieldOfSavingsInterest.setPrefHeight(10);
             textFieldOfSavingsInterest.setPrefWidth(200);
 
@@ -742,14 +742,14 @@ public class Main extends Application {
             TextField textFieldOfSavingsFv = new TextField();
             textFieldOfSavingsFv.setLayoutY(210);
             textFieldOfSavingsFv.setLayoutX(150);
-            textFieldOfSavingsFv.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfSavingsFv.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
             textFieldOfSavingsFv.setPrefHeight(10);
             textFieldOfSavingsFv.setPrefWidth(200);
 
             TextField textFieldOfSavingsTime = new TextField();
             textFieldOfSavingsTime.setLayoutY(260);
             textFieldOfSavingsTime.setLayoutX(150);
-            textFieldOfSavingsTime.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldOfSavingsTime.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
             textFieldOfSavingsTime.setPrefHeight(10);
             textFieldOfSavingsTime.setPrefWidth(200);
 
@@ -1591,65 +1591,65 @@ public class Main extends Application {
             Label TopicMortgageCalculator = new Label("Mortgage Calculator");
             TopicMortgageCalculator.setLayoutY(25);
             TopicMortgageCalculator.setLayoutX(220);
-            TopicMortgageCalculator.setFont(Font.font("Times New Roman", FontWeight.BOLD, 42));
+            TopicMortgageCalculator.setFont(Font.font("Segoe UI", FontWeight.BOLD, 42));
 
             Label labelHomePriceMortgage = new Label("Home Price");
             labelHomePriceMortgage.setLayoutY(110);
             labelHomePriceMortgage.setLayoutX(20);
-            labelHomePriceMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelHomePriceMortgage.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
 
             Label labelPaymentMortgage = new Label("Down Payment");
             labelPaymentMortgage.setLayoutY(160);
             labelPaymentMortgage.setLayoutX(20);
-            labelPaymentMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelPaymentMortgage.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
             Label labelTermMortgage = new Label("Mortgage Term");
             labelTermMortgage.setLayoutY(210);
             labelTermMortgage.setLayoutX(20);
-            labelTermMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelTermMortgage.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
             Label labelInterestMortgage = new Label("Interest Rate");
             labelInterestMortgage.setLayoutY(260);
             labelInterestMortgage.setLayoutX(20);
-            labelInterestMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelInterestMortgage.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 18));
 
             Label labelMortgageOutputName = new Label("");
             labelMortgageOutputName.setLayoutY(370);
             labelMortgageOutputName.setLayoutX(20);
-            labelMortgageOutputName.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelMortgageOutputName.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 19));
 
             Label labelMortgageOutputValue = new Label("");
             labelMortgageOutputValue.setLayoutY(370);
             labelMortgageOutputValue.setLayoutX(200);
-            labelMortgageOutputValue.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            labelMortgageOutputValue.setFont(Font.font("Times New Roman", FontWeight.NORMAL, 19));
 
             //text fields of mortgage calculator
             TextField textFieldHomeMortgage = new TextField();
             textFieldHomeMortgage.setLayoutY(110);
             textFieldHomeMortgage.setLayoutX(160);
-            textFieldHomeMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldHomeMortgage.setFont(Font.font("Times New Roman", FontWeight.NORMAL, 19));
             textFieldHomeMortgage.setPrefHeight(10);
             textFieldHomeMortgage.setPrefWidth(200);
 
             TextField textFieldDownMortgage = new TextField();
             textFieldDownMortgage.setLayoutY(160);
             textFieldDownMortgage.setLayoutX(160);
-            textFieldDownMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldDownMortgage.setFont(Font.font("Times New Roman", FontWeight.NORMAL, 19));
             textFieldDownMortgage.setPrefHeight(10);
             textFieldDownMortgage.setPrefWidth(200);
 
             TextField textFieldTermMortgage = new TextField();
             textFieldTermMortgage.setLayoutY(210);
             textFieldTermMortgage.setLayoutX(160);
-            textFieldTermMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldTermMortgage.setFont(Font.font("Times New Roman", FontWeight.NORMAL, 19));
             textFieldTermMortgage.setPrefHeight(10);
             textFieldTermMortgage.setPrefWidth(200);
 
             TextField textFieldInterestMortgage = new TextField();
             textFieldInterestMortgage.setLayoutY(260);
             textFieldInterestMortgage.setLayoutX(160);
-            textFieldInterestMortgage.setFont(Font.font("Times New Roman", FontWeight.BOLD, 19));
+            textFieldInterestMortgage.setFont(Font.font("Times New Roman", FontWeight.NORMAL, 19));
             textFieldInterestMortgage.setPrefHeight(10);
             textFieldInterestMortgage.setPrefWidth(200);
 
